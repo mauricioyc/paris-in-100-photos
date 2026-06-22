@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { background: #bfac92; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  @page { size: 297mm 210mm; margin: 0; }
+  @media print {
+    html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    body { background: #fff; }
+    #dc-root, .sc-host { height: auto !important; }
+    .screen-only { display: none !important; }
+    .page { box-shadow: none !important; margin: 0 !important; break-after: page; }
+    .page:last-child { break-after: auto; }
+  }
+  .page { break-after: page; break-inside: avoid; }
+</style>
+</helmet>
+
+<div class="screen-only" style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; color:#5b554a; max-width:297mm; margin:24px auto 0; padding:14px 18px; background:#d4c4ad; border:1px solid #c0b09c; border-radius:8px; font-size:13px; line-height:1.6;">
+  <strong style="color:#1c1a17; letter-spacing:.04em;">EBOOK · A4 landscape 297 × 210 mm · 103 pages — screen PDF, no bleed/trim</strong><br>
+  Cover is page 1; photos are framed on white matching the interior style. <strong style="color:#b0673c;">Under 150 MB:</strong> resize photos to ~2000 px long edge, then print-to-PDF at 96–150 DPI. All photos in <code style="color:#b0673c;">photos/</code>.
+</div>
+
+<div style="padding:32px 0; display:flex; flex-direction:column; align-items:center; gap:26px;">
+
+  <!-- ============ COVER PAGE ============ -->
+  <div class="page" style="position:relative; width:297mm; height:210mm; background:#c8b59a; box-shadow:0 18px 50px rgba(0,0,0,.45); overflow:hidden;">
+    <!-- full-bleed photo -->
+    <div style="position:absolute; inset:0; background:repeating-linear-gradient(45deg,#c4b49c,#c4b49c 13px,#bfac92 13px,#bfac92 26px);">
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Helvetica Neue',monospace; font-size:14px; letter-spacing:.2em; color:#9a948a; text-transform:uppercase;">photos/cover.jpg</span>
+      </div>
+      <img src="photos/cover.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:grayscale(.14) contrast(1.03); display:block;">
+    </div>
+    <!-- soft right vignette -->
+    <div style="position:absolute; inset:0; background:linear-gradient(105deg, rgba(16,11,7,0) 50%, rgba(16,11,7,.18) 100%);"></div>
+    <!-- wedge, recalibrated for 297×210 -->
+    <div style="position:absolute; inset:0; filter:drop-shadow(5mm 0 12mm rgba(16,11,7,.36));">
+      <div style="position:absolute; inset:0; clip-path:polygon(0 0, 0 100%, 54% 50%); background:#c8b59a;"></div>
+    </div>
+    <svg viewBox="0 0 297 210" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;">
+      <polyline points="0,0 160.4,105 0,210" fill="none" stroke="#b0673c" stroke-width="1"></polyline>
+    </svg>
+    <!-- title block within wedge -->
+    <div style="position:absolute; top:0; bottom:0; left:0; width:165mm; display:flex; flex-direction:column; justify-content:center; padding:0 0 0 20mm;">
+      <div style="display:flex; align-items:center; gap:5mm; margin-bottom:8mm;">
+        <span style="width:12mm; height:2px; background:#b0673c;"></span>
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:600; font-size:11px; letter-spacing:.26em; color:#b0673c; text-transform:uppercase;">A Photographic Essay</span>
+      </div>
+      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:700; font-size:110px; line-height:.86; letter-spacing:-.04em; color:#1c1a17; text-transform:uppercase;">Paris</div>
+      <div style="display:flex; align-items:baseline; gap:5mm; margin-top:8mm;">
+        <span style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:24px; color:#1c1a17;">in</span>
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:700; font-size:14px; letter-spacing:.22em; color:#1c1a17; text-transform:uppercase;">One Hundred Photographs</span>
+      </div>
+      <div style="margin-top:7mm; font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:16px; color:#6f675d;">Mauricio Chigutti</div>
+    </div>
+  </div>
+
+  <!-- ============ INTRODUCTION ============ -->
+  <div class="page" style="position:relative; width:297mm; height:210mm; background:#fff; box-shadow:0 18px 50px rgba(0,0,0,.45); overflow:hidden; display:flex;">
+    <div style="width:40%; height:100%; background:repeating-linear-gradient(45deg,#cec0a8,#cec0a8 12px,#c2b09a 12px,#c2b09a 24px); position:relative; overflow:hidden;">
+      <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+        <span style="font-family:'Helvetica Neue',monospace; font-size:12px; letter-spacing:.18em; color:#9a978f; text-transform:uppercase;">photos/intro.jpg</span>
+      </div>
+      <img src="photos/intro.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+    </div>
+    <div style="flex:1; padding:16mm 18mm 16mm 20mm; display:flex; flex-direction:column; justify-content:center;">
+      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:600; letter-spacing:.32em; color:#b0673c; text-transform:uppercase; margin-bottom:7mm;">Introduction</div>
+      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:700; font-size:34px; line-height:1.1; letter-spacing:-.02em; color:#1c1a17; margin-bottom:8mm;">The city, one frame at a time.</div>
+      <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; line-height:1.62; color:#2a2620; margin:0 0 5mm;">There are a hundred Parises folded into one, and this book makes no claim to settle which is the true one. It simply looks — patiently, at street level — and lets the city answer in light.</p>
+      <p style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:15px; line-height:1.62; color:#2a2620; margin:0 0 5mm;">The photographs gathered here were made over many seasons and at every hour: zinc rooftops under rain, the long gold of a summer quay, the blue minute before the lamps come on.</p>
+      <p style="font-family:Georgia,'Times New Roman',serif; font-style:italic; font-size:17px; line-height:1.5; color:#6f675d; margin:0;">Turn the page slowly. Paris was never in a hurry to be understood.</p>
+    </div>
+  </div>
+
+  <!-- ============ 100 PHOTO PAGES — white, framed, matching interior style ============ -->
+  <sc-for list="{{ photos }}" as="p" hint-placeholder-count="6">
+    <div class="page" style="position:relative; width:297mm; height:210mm; background:#fff; box-shadow:0 18px 50px rgba(0,0,0,.45); overflow:hidden;">
+      <!-- frame is exactly 269×179.3 mm = 3:2 ratio matching 6192×4128 photos — zero crop -->
+      <div style="position:absolute; top:14mm; left:14mm; right:14mm; bottom:17mm; overflow:hidden; background:repeating-linear-gradient(45deg,#cec0a8,#cec0a8 12px,#c2b09a 12px,#c2b09a 24px);">
+        <div style="position:absolute; inset:0; display:flex; align-items:center; justify-content:center;">
+          <span style="font-family:'Helvetica Neue',monospace; font-size:13px; letter-spacing:.18em; color:#9a978f; text-transform:uppercase;">photos/{{ p.n }}.jpg</span>
+        </div>
+        <img src="photos/{{ p.n }}.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block;">
+      </div>
+      <div style="position:absolute; left:14mm; right:14mm; bottom:9mm; display:flex; align-items:center; justify-content:center; gap:5mm;">
+        <span style="width:8mm; height:1px; background:#c9c5bb;"></span>
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.2em; color:#b0673c;">{{ p.label }}</span>
+        <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:11px; letter-spacing:.2em; color:#9a948a;">/ 100</span>
+        <span style="width:8mm; height:1px; background:#c9c5bb;"></span>
+      </div>
+    </div>
+  </sc-for>
+
+  <!-- ============ CLOSING ============ -->
+  <div class="page" style="position:relative; width:297mm; height:210mm; background:#fff; box-shadow:0 18px 50px rgba(0,0,0,.45); overflow:hidden;">
+    <!-- tonal wedge echoing cover -->
+    <div style="position:absolute; inset:0; clip-path:polygon(0 0, 0 100%, 46% 50%); background:#c8b59a;"></div>
+    <svg viewBox="0 0 297 210" preserveAspectRatio="none" style="position:absolute; inset:0; width:100%; height:100%; pointer-events:none;">
+      <polyline points="0,0 136.6,105 0,210" fill="none" stroke="#b0673c" stroke-width="0.9"></polyline>
+    </svg>
+    <!-- wordmark -->
+    <div style="position:absolute; top:0; bottom:0; left:0; width:145mm; display:flex; flex-direction:column; justify-content:center; padding:0 0 0 20mm;">
+      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:700; font-size:80px; line-height:.86; letter-spacing:-.04em; color:#1c1a17; text-transform:uppercase;">Paris</div>
+      <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight:600; font-size:12px; letter-spacing:.28em; color:#2a2620; text-transform:uppercase; margin-top:6mm;">in 100 photographs</div>
+    </div>
+    <!-- credits -->
+    <div style="position:absolute; top:0; bottom:0; right:18mm; width:110mm; display:flex; flex-direction:column; justify-content:center; gap:8mm;">
+      <div>
+        <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:.24em; color:#b0673c; text-transform:uppercase; margin-bottom:3mm;">Photography</div>
+        <div style="font-family:Georgia,'Times New Roman',serif; font-size:18px; color:#1c1a17;">Mauricio Chigutti</div>
+      </div>
+      <div>
+        <div style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:10px; font-weight:700; letter-spacing:.24em; color:#b0673c; text-transform:uppercase; margin-bottom:3mm;">Edition</div>
+        <div style="font-family:Georgia,'Times New Roman',serif; font-size:18px; color:#1c1a17;">First edition · 2026 · Ebook</div>
+      </div>
+    </div>
+    <div style="position:absolute; bottom:14mm; left:20mm; right:18mm; display:flex; justify-content:space-between; align-items:center;">
+      <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:10px; letter-spacing:.1em; color:#847b71;">© 2026 Mauricio Chigutti. All rights reserved.</span>
+      <span style="font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-size:10px; letter-spacing:.12em; color:#b0673c;">mauriciochigutti.com</span>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    const photos = [];
+    for (let i = 1; i <= 100; i++) {
+      photos.push({
+        n: String(i).padStart(3, '0'),
+        label: String(i).padStart(2, '0'),
+      });
+    }
+    return { photos };
+  }
+}
+</script>
+</body>
+</html>
